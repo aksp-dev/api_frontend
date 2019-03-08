@@ -1,0 +1,16 @@
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: white;
+    }
+}
+
+.bg-top-nav {
+    background: linear-gradient(120deg, #00e4d0, #5983e8);
+    color: white;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}

@@ -1,0 +1,25 @@
+
+.card-container.menu {
+    width: 235px;
+    margin-right: 30px;
+    margin-bottom: 30px; 
+    min-height: 280px;
+
+    a::after{
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index:1;
+        content:"";
+    }
+    &:hover {
+        color: #AAAAAA;
+    }
+}
+
+.card-icon {
+    font-size: 160px;
+    margin-left: 25px;
+}

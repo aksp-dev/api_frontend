@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- top menu -->
+<app-top-navigation></app-top-navigation>
+  <!-- side bar -->
+<div>
+    <mat-sidenav-container class="nav-container">
+      <mat-sidenav class="side-container" mode="side" opened><app-side-navigation></app-side-navigation></mat-sidenav>
+      <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

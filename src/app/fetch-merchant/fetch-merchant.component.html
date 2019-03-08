@@ -1,0 +1,23 @@
+<div class="fmerchant-container">
+  <form class="search-form" [formGroup]="fmerchantForm" (ngSubmit)="onSubmit()">
+    <mat-card class="card-container">
+      <mat-card-content>
+        <mat-form-field class="mr-20px">
+          <input matInput name="merchantId" placeholder="MerchantId" formControlName="merchantId">
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+    <div class="mt-20px">
+      <button mat-raised-button color="primary" class="btn-mr" (click)="onSearch()">Search</button>
+      <button mat-raised-button color="accent" (click)="onDownload()">
+        <mat-icon class="dl-icon">save_alt</mat-icon>Download
+      </button>
+    </div>
+  </form>
+  
+  <app-search-container 
+    [isShow]='isShowSearchContainer'
+    [displayedColumns]='displayedColumns'
+    [dataSource]='dataSource'>
+  </app-search-container>
+</div>
