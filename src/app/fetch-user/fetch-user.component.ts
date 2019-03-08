@@ -97,4 +97,4 @@ export class FetchUserComponent implements OnInit {
 //const END_POINT = 'https://s3-ap-northeast-1.amazonaws.com/s3.kos.sample.bk.a/sample.json';
 const END_POINT = 'http://13.114.86.228:8080/members/';
 const EXPORT_CSV_NAME = 'member';
-const TEMP='tempeeee'
+const TEMP='tempeee'
