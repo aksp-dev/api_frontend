@@ -33,7 +33,7 @@ export class FileService {
   private createFileName(): string{
     const now = new Date();
     const formatedDate = 
-    // Add blank to convert digit into String for performance.
+    // Add blank to convert digit into string for performance.
     '' + now.getFullYear() + now.getMonth()+1 + now.getDate() + now.getHours()+ now.getMinutes() + now.getSeconds()
     return formatedDate;
   }
