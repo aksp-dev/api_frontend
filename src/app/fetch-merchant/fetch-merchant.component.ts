@@ -74,4 +74,3 @@ export class FetchMerchantComponent implements OnInit {
 }
 const END_POINT = 'http://13.114.86.228:8080/members/';
 const EXPORT_CSV_NAME = 'merchant';
-const TEST = 'test';
