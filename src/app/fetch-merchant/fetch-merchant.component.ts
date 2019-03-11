@@ -22,7 +22,6 @@ export class FetchMerchantComponent implements OnInit {
   isDownload: boolean;
   
   // Search Container Params
-  isShowSearchContainer: boolean;
   displayedColumns: string[] = ['merchantCode','tenantCode','memberId','status','cardCompanyCode','cardNumber','cardExpireDate'];
   dataSource = new MatTableDataSource<Member>(this.data);
 
@@ -37,7 +36,7 @@ export class FetchMerchantComponent implements OnInit {
         console.log('download')
         this.fileService
           .jsontocsv(json,this.displayedColumns)
-          .download(merchantId + '_' + EXPORT_CSV_NAME);
+          .download(`${merchantId}_${EXPORT_CSV_NAME}`);
         return;
       }
       // Search Case
@@ -48,12 +47,10 @@ export class FetchMerchantComponent implements OnInit {
         this.data = [json]
       }
       this.dataSource = new MatTableDataSource<Member>(this.data);
-      this.isShowSearchContainer = true;
     })
   }
 
   onSearch() {
-    this.isShowSearchContainer = true;
     this.isDownload = false;
   }
 

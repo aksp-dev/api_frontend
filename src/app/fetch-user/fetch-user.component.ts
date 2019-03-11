@@ -17,7 +17,6 @@ import { MemberService } from '../service/member/member.service';
 export class FetchUserComponent implements OnInit {
 
   readonly statuses = ['有効','無効'];
-  isShow: boolean;
   isDownload: boolean;
   data: Member[];
   displayedColumns: string[] = ['merchantCode','tenantCode','memberId','status','cardCompanyCode','cardNumber','cardExpireDate'];
@@ -54,14 +53,12 @@ export class FetchUserComponent implements OnInit {
 
       // Download Case
       if(this.isDownload) {
-        console.log('download')
         this.fileService
           .jsontocsv(json,this.displayedColumns)
-          .download(merchantId + '_' + EXPORT_CSV_NAME);
+          .download(`${merchantId}_${EXPORT_CSV_NAME}`);
         return;
       }
       // Search Case
-      console.log('search')
       this.data = json;
       // Not Array Case
       if(!(json instanceof Array)){
@@ -69,7 +66,6 @@ export class FetchUserComponent implements OnInit {
       }
       this.dataSource = new MatTableDataSource<Member>(this.data);
       this.dataSource.paginator = this.paginator;
-      this.isShow = true;
     })
   }
 
