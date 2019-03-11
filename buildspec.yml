@@ -1,0 +1,17 @@
+version: 0.2
+ 
+phases:
+  install:
+    commands:
+      - aws --version
+      - npm -v
+      - npm update -g npm
+      - npm install -g @angular/cli@7.3.5
+      - npm install --save hammerjs
+      - npm install
+  build:
+    commands:
+      - ng build --prod
+  post_build:
+    commands:
+      - aws s3 sync dist $DEPLOYMENT_S3_BUCKET --delete
