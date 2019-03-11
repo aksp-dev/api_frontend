@@ -5,7 +5,8 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install --upgrade awscli
-      - npm update -g npm
+      - npm -v
+      - npm update npm
       - npm install -g @angular/cli@7.3.5
       - npm install
   build:
