@@ -9,7 +9,6 @@ import { MatPaginator, MatTableDataSource} from '@angular/material';
 })
 export class SearchContainerComponent implements OnInit {
 
-  @Input() isShow: boolean;
   @Input() displayedColumns: string[];
   @Input() dataSource = new MatTableDataSource<any>();
 
