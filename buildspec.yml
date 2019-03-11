@@ -3,10 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install --upgrade pip
-      - pip install --upgrade awscli
+      - aws --version
       - npm -v
-      - npm update npm
+      - npm update -g npm
       - npm install -g @angular/cli@7.3.5
       - npm install
   build:
