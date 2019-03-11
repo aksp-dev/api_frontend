@@ -1,4 +1,4 @@
-<div class="mat-elevation-z8 mt-20px mr-20px" *ngIf="isShow">
+<div class="mat-elevation-z8 mt-20px mr-20px" *ngIf="dataSource.data.length > 0">
   <table mat-table [dataSource]="dataSource" class="search-container-table">
     <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
       <th mat-header-cell *matHeaderCellDef> {{column}} </th>

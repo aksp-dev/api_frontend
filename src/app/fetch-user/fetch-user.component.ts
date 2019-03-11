@@ -17,7 +17,6 @@ import { MemberService } from '../service/member/member.service';
 export class FetchUserComponent implements OnInit {
 
   readonly statuses = ['有効','無効'];
-  isShow: boolean;
   isDownload: boolean;
   data: Member[];
   displayedColumns: string[] = ['merchantCode','tenantCode','memberId','status','cardCompanyCode','cardNumber','cardExpireDate'];
@@ -67,7 +66,6 @@ export class FetchUserComponent implements OnInit {
       }
       this.dataSource = new MatTableDataSource<Member>(this.data);
       this.dataSource.paginator = this.paginator;
-      this.isShow = true;
     })
   }
 
