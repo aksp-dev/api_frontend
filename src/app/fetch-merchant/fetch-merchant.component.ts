@@ -37,7 +37,7 @@ export class FetchMerchantComponent implements OnInit {
         console.log('download')
         this.fileService
           .jsontocsv(json,this.displayedColumns)
-          .download(merchantId + '_' + EXPORT_CSV_NAME);
+          .download(`${merchantId}_${EXPORT_CSV_NAME}`);
         return;
       }
       // Search Case
