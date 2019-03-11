@@ -19,6 +19,7 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
 import { TopNavigationComponent } from './top-navigation/top-navigation.component';
 import { SearchContainerComponent } from './search-container/search-container.component';
 import { FetchMerchantComponent } from './fetch-merchant/fetch-merchant.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FetchMerchantComponent } from './fetch-merchant/fetch-merchant.componen
     SideNavigationComponent,
     TopNavigationComponent,
     SearchContainerComponent,
-    FetchMerchantComponent
+    FetchMerchantComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
